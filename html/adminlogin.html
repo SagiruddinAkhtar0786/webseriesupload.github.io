@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TubeTV Admin Login</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../partial/style.css">
+
+ 	<style type="text/css">
+ 		body {
+                  background-image: url("../image/back.jpg");
+                  background-position: center center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  height: 650px;
+            }
+          	</style>
+
+</head>
+<body>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../css/adminlogin.css"> -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+			</div>
+
+			<div class="col-md-6 w-50" style=" background-color: rgba(0, 0, 0, 0.8); margin-top: 100px; border-radius: 5px;">
+				<form action="../html/adminindex.html"><br/>
+					<a href="../html/index.html" style="float: right;">Home</a> <br>
+				
+					
+  					<div class="form-group">
+    					<label for="exampleInputEmail1" style="color: whitesmoke;">Email address</label>
+	  	  				<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+		    			<!-- <small id="emailHelp" class="form-text text-muted" style="font-size: 14px;">We'll never share your email with anyone else.</small> -->
+ 					</div>
+ 	 				<div class="form-group">
+		    			<label for="exampleInputPassword1" style="color: whitesmoke;">Password</label>
+	    				<input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+					  </div>	
+					  <br>
+					  
+		  			<!-- <div class="form-group">
+		  				<small id="emailHelp" class="form-text text-muted" style="font-size: 14px;">forgot</small><a href="../html/signup.html">&nbsp;&nbsp;username / password.</a>
+  					</div> -->
+  					<button type="submit" id="btnsubmit" class="btn btn-warning ">Sign in</button><br>
+				</form><br/>
+
+				<script type="text/javascript">
+    				$(function () 
+    				{
+        				$("#btnsubmit").click(function () 
+        				{
+            				var password = $("#password").val(); 
+            				var confirmPassword = "sagir@123";
+            				var email = $("#email").val();
+            				var confirmemail = "sagir.akhtar387@gmail.com";
+            				if (password != confirmPassword && email != confirmemail) 
+            				{
+                				alert("!! Wrong Credentials for Login !!");
+                				return false;
+            				}
+            				return true;
+        				});
+    				});
+				</script>
+
+
+			</div>
+
+			<div class="col-md-3">
+			</div>
+		</div><!-- row -->
+	</div><!-- container -->
+
+</body>
+</html>
